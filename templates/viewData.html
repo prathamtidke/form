@@ -190,12 +190,13 @@ h2::after {
     </tr>
   </thead>
   <tbody>
+	  {% for item in Details %}
     <tr>
-      <th scope="row">1</th>
-      <td>Rohit</td>
-      <td>Sharma</td>
-      <td>40</td>
-      <td>Gondia</td>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{allDetail.Firstname}}</td>
+      <td>{{Details.Lastname}}</td>
+      <td>{{Details.Age}}</td>
+      <td>{{Details.Location}}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
@@ -211,8 +212,10 @@ h2::after {
       <td>27</td>
       <td>Mumbai</td>
     </tr>
+{{%endfor%}}
   </tbody>
 </table>
+
 <!--# table ended-->
 
 {% endblock %}
