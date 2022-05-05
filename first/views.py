@@ -18,7 +18,7 @@ def index(request):
 
 def viewData(request):
     allDetail = Details.objects.all()
-    for item in allDetail:
-        print(item.Firstname)
+    # for item in allDetail:
+    #     print(item.Firstname,item.Lastname,item.Age,item.Location)
     context = {'Details' : allDetail}
     return render (request,'viewData.html',context)
